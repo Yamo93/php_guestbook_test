@@ -1,0 +1,566 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    height: auto;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #EDEDED;
+    width: 100%;
+    height: 100%;
+}
+
+hr {
+    margin: 10px 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p, li, a {
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    background-color: #333;
+    height: 10vh;
+    padding: 1.5rem 2rem;
+    color: #EFEFEF;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainnav {
+    width: 50%;
+}
+
+.mainnav ul, .footer ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.hamburger {
+    cursor: pointer;
+    color: rgb(3, 146, 207);
+    font-size: 3rem;
+    display: none;
+}
+
+li {
+    margin-right: 2rem;
+    line-height: 1.4em;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-height: 80vh;
+}
+
+.sidebar {
+    width: 15vw;
+    background-color: #333;
+    color: #EFEFEF;
+}
+
+.sidebar ul {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.sidebar ul li {
+    width: 100%;
+}
+
+.sidebar ul li a {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem;
+    border-bottom: .5px solid rgba(204, 204, 204, 0.7);
+    transition: all .3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: rgb(221, 148, 13);
+    color: #333;
+}
+
+.active {
+    background-color: #0272A3;
+}
+
+.sidebar ul li.active:hover {
+    background-color: rgb(3, 146, 207);
+    color: white;
+}
+
+.maincontent {
+    padding: 6rem;
+    width: 85vw;
+    height: 100%;
+}
+
+.maincontent a {
+    font-weight: 600;
+    color: rgb(64, 131, 64);
+}
+
+.maincontent ul, .maincontent ol {
+    margin-left: 5%;
+}
+
+.maincontent .fragor {
+    width: 60%;
+}
+
+.maincontent .variableoutput {
+    padding: 1.5rem;
+    background-color: rgb(230, 230, 230);
+    box-shadow: 1px 1px 1.5px rgba(0, 0, 0, .2);
+}
+
+.maincontent .benefits {
+    list-style-type: none;
+}
+
+.maincontent .benefits li {
+    line-height: 1.5em;
+}
+
+.maincontent .benefits, .maincontent .environment {
+    margin-left: 5%;
+    margin-top: 1rem;
+}
+
+.maincontent .environment span {
+    color: maroon;
+    font-weight: 600;
+}
+
+.title, .content-para {
+    margin-bottom: 1rem;
+    width: 60%;
+}
+
+.content-para {
+    line-height: 1.4em;
+}
+
+.content-para span {
+    font-weight: 600;
+}
+
+.fragor li {
+    margin-bottom: 1.5rem;
+}
+
+.fragor li strong {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.footer {
+    z-index: 10;
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(221, 148, 13);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer ul {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form {
+    width: 50%;
+    margin-bottom: 3rem;
+}
+
+.form label {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.form input[type=text] {
+    font: inherit;
+    font-size: 1.6rem;
+    display: block;
+    margin-bottom: 1rem;
+    padding: 3px;
+    width: 100%;
+}
+
+.form input[type=submit] {
+    padding: .5rem 1.5rem;
+    background-color: crimson;
+    color: white;
+    font: inherit;
+    font-size: 1.6rem;
+    width: 100%;
+    border: 1px solid orange;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.form input[type=submit]:hover {
+    background-color: rgb(167, 15, 45);
+    color: whitesmoke;
+}
+
+.form textarea {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.get_output {
+    margin-top: 1.5rem;
+    text-align: center;
+    font: inherit;
+    font-size: 1.8rem;
+    color: darkred;
+}
+
+.read_output {
+    margin: 1.5rem 0;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 1.5rem;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
+    background-color: whitesmoke;
+}
+
+.returnbtn:link, .returnbtn:visited {
+    display: block;
+    margin-top: 2rem;
+    padding: .5rem 1.5rem;
+    width: 150px;
+    text-align: center;
+    font: inherit;
+    font-size: 1.6rem;
+    background-color: crimson;
+    color: white;
+    transition: all .3s;
+}
+
+.returnbtn:hover, .returnbtn:active {
+    background-color: rgb(146, 15, 41);
+    color: white;
+}
+
+@media screen and (max-width: 850px) {
+
+    html {
+        font-size: 56.25%;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        min-height: 70px;
+    }
+
+    .mainnav {
+        width: 70%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        margin-top: 70px;
+    }
+
+    .sidebar {
+        position: fixed;
+        width: 100%;
+        transform: translateY(0%);
+        transform: translateY(-130%);
+        transition: all .4s;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .sidebar ul li {
+        margin-right: 0;
+    }
+
+    .maincontent {
+        width: 100%;
+        padding: 2.5rem 3rem;
+    }
+
+    .maincontent .fragor, .maincontent .content-para, .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .footer {
+        height: 130px;
+    }
+
+    .footer ul {
+        flex-direction: column;
+        width: 70%;
+        align-items: center;
+    }
+
+    .footer li {
+        margin-bottom: .5rem;
+    }
+
+    .copy {
+        text-align: center;
+    }
+}
+
+.gastbok, .login, .admin {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+.login h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.login .info, .admin .info {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+}
+
+.info span {
+    font-weight: 600;
+}
+
+.alert {
+    color: rgb(231, 12, 12);
+    margin-bottom: 2rem;
+}
+
+.success {
+    color: rgb(25, 223, 18);
+    margin-bottom: 2rem;
+}
+
+.login .info span {
+    font-weight: 600;
+}
+
+.gastbok__namn, .gastbok__msg, 
+.login__namn, .login__msg {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+
+.gastbok__inputnamn, .msgfalt,
+ .login__username, .login__password {
+    font: inherit;
+    font-size: 1.6rem;
+    padding: .5rem;
+}
+
+.login__username, .login__password {
+    width: 60%;
+}
+
+.msgfalt {
+    margin-bottom: 1.5rem;
+}
+
+.skapa, .loginbtn, .logoutbtn {
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    background-color: rgb(3, 146, 207);
+    color: whitesmoke;
+    font: inherit;
+    font-size: 1.6rem;
+    border: none;
+    border: 1px solid whitesmoke;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, .3);
+    padding: .5rem 0;
+    transition: all .3s;
+}
+
+.loginbtn, .logoutbtn {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+    width: 60%;
+}
+
+@media screen and (max-width: 470px) {
+    .login__username, .login__password, .loginbtn {
+        width: 100%;
+    }
+}
+
+.skapa:hover, .loginbtn:hover, .logoutbtn:hover {
+    background-color: rgb(2, 104, 148);
+}
+
+.datafil:link, .datafil:visited {
+    color: rgb(221, 148, 13) !important;
+    margin-bottom: 2.5rem;
+    display: block;
+}
+
+.inlagg {
+    margin: 2rem 0;
+    padding-bottom: 3rem;
+    border-bottom: .5px solid rgba(0, 0, 0, .6);
+}
+
+.meddelande, .skribent, .datum {
+    margin-bottom: 1.5rem;
+}
+
+.datum {
+    margin-bottom: 3rem;
+}
+
+.datum span {
+    font-weight: 600;
+}
+
+.radera, .redigera {
+    background-color: rgb(199, 21, 21);
+    color: whitesmoke !important;
+    padding: 1.5rem 1rem;
+    transition: all .3s;
+}
+
+.redigera {
+    background-color: rgb(25, 223, 18);
+    margin-right: 2rem;
+}
+
+.radera:hover {
+    background-color: rgb(146, 15, 15);
+}
+
+.redigera:hover {
+    background-color: rgb(19, 161, 14);
+}
+
+ul.gastbok_nav {
+    margin: 3rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+ul.gastbok_nav li {
+    margin-bottom: 1.5rem;
+}
+
+.gastbok_nav a:link,
+.gastbok_nav a:visited {
+    padding: 1rem 0;
+    padding-bottom: .5rem;
+    border-bottom: 1.5px solid transparent;
+    transition: all .3s;
+}
+
+a.menu-active:link, a.menu-active:visited {
+    color: rgb(221, 20, 20);
+    border-bottom: 1.5px solid rgb(2, 104, 148);
+}
+
+.gastbok_nav a:hover, 
+.gastbok_nav a:active {
+    border-bottom: 1.5px solid rgb(2, 104, 148);
+}
+
+.rest {
+    width: 90%;
+    max-width: 450px;
+    max-height: 40vh;
+    overflow: scroll;
+    border: 1px solid rgb(2, 104, 148);
+}
+
+.rest .rest__top {
+    padding: 2rem 0;
+    font-size: 2rem;
+    text-align: center;
+    background-color: rgba(10, 152, 212, 0.3);
+}
+
+.rest .rest__content {
+    width: 100%;
+    height: 100%;
+}
+
+.rest .rest__content .rest__content-post {
+    padding: 2rem;
+    border-bottom: .5px solid rgba(0, 0, 0, .4);
+}
+
+.rest__content-post--msg {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.rest__content-post--username span {
+    font-weight: 600;
+}
+
+.rest__content-post--username {
+    margin-bottom: 1rem;
+}
+
+.rest__content-post--date {
+    font-size: 1.6rem;
+}
+
+.rest__content-post--date span {
+    font-weight: 600;
+}
